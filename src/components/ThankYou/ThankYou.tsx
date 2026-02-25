@@ -17,7 +17,7 @@ const ThankYou: React.FC = () => {
           <div className="about-para">
             {`> STATUS: Apoio Confirmado...`} <br />
             {`> USUÁRIO: Novo Assinante Detectado.`} <br />
-            {`> MENSAGEM: Seu apoio mensal está oficialmente ativo. Obrigado por fortalecer a guilda!`}
+            {`> MENSAGEM: Seu apoio mensal está oficialmente ativo. Obrigado por fortalecer a comunidade!`}
           </div>
 
           <div className="about-skills">
