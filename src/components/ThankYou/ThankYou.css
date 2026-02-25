@@ -1,0 +1,272 @@
+/* ThankYou.css - Tema RPG Seleção de Personagem */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin: 40px auto;
+  max-width: 1200px;
+  width: 100%; /* Garante 100% da largura disponível */
+  box-sizing: border-box; /* Impede que o padding quebre a largura */
+  padding: 0 20px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.about-title h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(27, 179, 87, 0.5);
+  text-align: center;
+  margin: 0;
+}
+
+.about-sections {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Avatar Estilo Seleção de Personagem */
+.about-left {
+  display: flex;
+  justify-content: center;
+}
+
+.about-left img {
+  width: 450px;
+  height: auto;
+  border: 4px solid #32323c;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+  filter: grayscale(0.5);
+  transition: 0.4s;
+  background: #1a1a1a;
+}
+
+.about-left img:hover {
+  filter: grayscale(0);
+  border-color: #1bb357;
+  box-shadow: 0 0 20px rgba(27, 179, 87, 0.3);
+}
+
+.about-right {
+  flex: 1;
+  width: 100%;
+}
+
+.about-para {
+  font-family: "Courier New", monospace;
+  background: rgba(50, 50, 60, 0.2);
+  padding: 25px;
+  border-left: 4px solid #10a992;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+}
+
+/* --- BARRAS DE SKILLS (STATUS BARS) --- */
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-skill {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.about-skill p {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #1bb357;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.about-skill .bar-container {
+  width: 100%;
+  height: 12px;
+  background: #1a1a1a;
+  border: 1px solid #32323c;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-skill hr {
+  height: 100%;
+  margin: 0;
+  border: none;
+  background: linear-gradient(90deg, #10a992, #26bc20);
+  box-shadow: 0 0 10px rgba(38, 188, 32, 0.6);
+  animation: loadBar 1.5s ease-in-out forwards;
+}
+
+/* --- CONQUISTAS (CHARACTER STATS) --- */
+.about-achievements {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: #0d0d0d;
+  padding: 40px 0;
+  border: 2px solid #32323c;
+  clip-path: polygon(2% 0, 98% 0, 100% 50%, 98% 100%, 2% 100%, 0 50%);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.about-achievement {
+  text-align: center;
+}
+
+.about-achievement h1 {
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 2px 2px #10a992;
+  margin: 0;
+}
+
+.about-achievement p {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #1bb357;
+  margin-top: 5px;
+}
+
+/* Animações */
+@keyframes loadBar {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+  .about {
+    margin: 20px auto;
+    gap: 40px;
+  }
+
+  .about-title h1 {
+    font-size: 2.2rem;
+    padding: 0 10px;
+  }
+
+  .about-sections {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-left img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .about-achievements {
+    flex-direction: column;
+    gap: 30px;
+    clip-path: none; /* Remove o corte complexo no mobile para evitar bugs */
+    border: none;
+    border-top: 2px solid #32323c;
+    border-bottom: 2px solid #32323c;
+    padding: 30px 0;
+  }
+
+  .about-para {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+.btn-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rpg-btn {
+  position: relative;
+  display: inline-block;
+  padding: 15px 40px;
+  background: transparent;
+  color: #1bb357; /* Verde Neon */
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 14px;
+  border: 2px solid #1bb357;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* Corte angular estilo UI de Jogo */
+  clip-path: polygon(0 0, 90% 0, 100% 30%, 100% 100%, 10% 100%, 0 70%);
+  overflow: hidden;
+}
+
+.rpg-btn:hover {
+  background: #1bb357;
+  color: #000;
+  box-shadow: 0 0 20px rgba(27, 179, 87, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Efeito de brilho ao passar o mouse */
+.rpg-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.rpg-btn:hover::before {
+  left: 100%;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  .btn-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .rpg-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 20px;
+  }
+}

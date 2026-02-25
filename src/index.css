@@ -1,0 +1,50 @@
+/* index.css - Reset para Tema RPG Dark */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Força o tema Dark do seu projeto */
+  color-scheme: dark;
+  color: #fff;
+  background-color: #0a0a0a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* Remove o flex/center original que quebra a largura */
+  display: block;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Reset básico para links e botões seguirem seu tema */
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  transition: 0.3s;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* Garante que o fundo sempre seja o preto do seu tema */
+html {
+  background-color: #0a0a0a;
+}

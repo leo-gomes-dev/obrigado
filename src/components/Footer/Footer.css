@@ -1,0 +1,54 @@
+/* Footer.css - Tema RPG */
+
+.footer-rpg {
+  width: 100%;
+  background: #0d0d0d;
+  padding: 40px 20px; /* Padding unificado */
+  border-top: 2px solid #32323c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  box-sizing: border-box; /* Garante que o padding não quebre os 100% de largura */
+  text-align: center;
+
+  /* Detalhe angular para combinar com o tema do site */
+  clip-path: polygon(0 20%, 5% 0, 95% 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+.footer-content p {
+  font-family: "Courier New", monospace;
+  color: #1bb357;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.footer-content a {
+  color: #10a992;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: 0.3s;
+}
+
+.footer-content a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #1bb357;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 480px) {
+  .footer-rpg {
+    padding: 30px 15px;
+    /* Ajuste suave no ângulo para telas muito pequenas */
+    clip-path: polygon(0 10%, 10% 0, 90% 0, 100% 10%, 100% 100%, 0 100%);
+  }
+
+  .footer-content p {
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+}
