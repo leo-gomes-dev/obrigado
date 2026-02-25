@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="footer-rpg">
       <div className="footer-content">
         <p>
-          © {new Date().getFullYear()} - Handcrafted by{" Space"}
+          © {new Date().getFullYear()} - Handcrafted by {" Space"}
           <a
             href="https://leogomesdev.com"
             target="_blank"
